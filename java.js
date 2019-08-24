@@ -38,6 +38,10 @@ function draw() {
             score++;
         }
     }
+    fill(255);
+    textAlign(RIGHT, BOTTOM);
+    textSize(24);
+    text("The Score:" + score, width - 10, height - 10);
     if (ded) {
         drawDeathScreen();
     }
@@ -55,5 +59,7 @@ function mousePressed() {
 function drawDeathScreen() {
     fill(255);
     background(0);
-    text("YOU LOST\nThe score: " + (score) + "\nPress the mouse button to restart", width / 2, height / 2);
+    textAlign(CENTER, CENTER);
+    textSize(32);
+    text("YOU LOST\nThe score: " + score + "\nPress the mouse button to restart", width / 2, height / 2);
 }
